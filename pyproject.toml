@@ -11,7 +11,7 @@ license = {text = "MIT"}
 requires-python = ">=3.8"
 authors = [{name = "Seven Du", email = "jydu_seven@outlook.com"}]
 dependencies = []
-keywords = ["csv", "json", "dashboard", "html", "data-visualization", "cli", "explorer"]
+keywords = ["csv", "json", "html", "dashboard", "data-visualization", "python", "cli", "data-exploration", "zero-dependencies", "table"]
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Developers",
