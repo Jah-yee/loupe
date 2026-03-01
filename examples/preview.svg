@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="480" viewBox="0 0 900 480">
+<clipPath id="clip"><rect width="900" height="480" rx="12"/></clipPath>
+<g clip-path="url(#clip)">
+<defs>
+  <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1"/>
+    <stop offset="100%" style="stop-color:#a855f7;stop-opacity:1"/>
+  </linearGradient>
+  <linearGradient id="bar" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" style="stop-color:#6366f1;stop-opacity:0.7"/>
+    <stop offset="100%" style="stop-color:#a855f7;stop-opacity:0.7"/>
+  </linearGradient>
+</defs>
+<rect width="900" height="480" fill="#0f0f11" rx="12"/>
+<rect x="0" y="0" width="900" height="54" fill="#18181b" rx="12"/>
+<rect x="0" y="42" width="900" height="12" fill="#18181b"/>
+<rect x="0" y="53" width="900" height="1" fill="#3f3f46"/>
+<text x="24" y="34" font-family="-apple-system,Helvetica,sans-serif" font-size="18" font-weight="700" fill="url(#grad)">⊙ loupe</text>
+<text x="130" y="34" font-family="-apple-system,Helvetica,sans-serif" font-size="12" fill="#a1a1aa">saas_metrics.csv · 9 cols · 30 rows</text>
+<rect x="570" y="16" width="220" height="28" fill="#27272a" rx="7" stroke="#3f3f46" stroke-width="1"/>
+<text x="582" y="33" font-family="-apple-system,Helvetica,sans-serif" font-size="12" fill="#71717a">Search all columns…</text>
+<rect x="804" y="16" width="30" height="28" fill="#27272a" rx="7" stroke="#3f3f46" stroke-width="1"/>
+<text x="814" y="33" font-family="-apple-system,Helvetica,sans-serif" font-size="13" fill="#a1a1aa">◑</text>
+<rect x="0" y="54" width="900" height="84" fill="#0f0f11"/>
+<rect x="0" y="137" width="900" height="1" fill="#3f3f46"/>
+<rect x="24" y="66" width="196" height="62" fill="#18181b" rx="10" stroke="#3f3f46" stroke-width="1"/>
+<text x="36" y="82" font-family="-apple-system,Helvetica,sans-serif" font-size="9" letter-spacing="1" fill="#71717a" text-transform="uppercase">MRR</text>
+<text x="36" y="100" font-family="-apple-system,Helvetica,sans-serif" font-size="17" font-weight="600" fill="#e4e4e7">$12,841</text>
+<text x="36" y="115" font-family="-apple-system,Helvetica,sans-serif" font-size="10" fill="#a1a1aa">avg · 350–41,200</text>
+<rect x="36" y="120" width="172" height="4" fill="#27272a" rx="2"/>
+<rect x="36" y="120" width="82" height="4" fill="url(#bar)" rx="2"/>
+<rect x="236" y="66" width="196" height="62" fill="#18181b" rx="10" stroke="#3f3f46" stroke-width="1"/>
+<text x="248" y="82" font-family="-apple-system,Helvetica,sans-serif" font-size="9" letter-spacing="1" fill="#71717a" text-transform="uppercase">USERS</text>
+<text x="248" y="100" font-family="-apple-system,Helvetica,sans-serif" font-size="17" font-weight="600" fill="#e4e4e7">341</text>
+<text x="248" y="115" font-family="-apple-system,Helvetica,sans-serif" font-size="10" fill="#a1a1aa">avg · 7–1,102</text>
+<rect x="248" y="120" width="172" height="4" fill="#27272a" rx="2"/>
+<rect x="248" y="120" width="82" height="4" fill="url(#bar)" rx="2"/>
+<rect x="448" y="66" width="196" height="62" fill="#18181b" rx="10" stroke="#3f3f46" stroke-width="1"/>
+<text x="460" y="82" font-family="-apple-system,Helvetica,sans-serif" font-size="9" letter-spacing="1" fill="#71717a" text-transform="uppercase">CHURN_RATE</text>
+<text x="460" y="100" font-family="-apple-system,Helvetica,sans-serif" font-size="17" font-weight="600" fill="#e4e4e7">4.2%</text>
+<text x="460" y="115" font-family="-apple-system,Helvetica,sans-serif" font-size="10" fill="#a1a1aa">avg · 0.6–13.5</text>
+<rect x="460" y="120" width="172" height="4" fill="#27272a" rx="2"/>
+<rect x="460" y="120" width="82" height="4" fill="url(#bar)" rx="2"/>
+<rect x="660" y="66" width="196" height="62" fill="#18181b" rx="10" stroke="#3f3f46" stroke-width="1"/>
+<text x="672" y="82" font-family="-apple-system,Helvetica,sans-serif" font-size="9" letter-spacing="1" fill="#71717a" text-transform="uppercase">NPS_SCORE</text>
+<text x="672" y="100" font-family="-apple-system,Helvetica,sans-serif" font-size="17" font-weight="600" fill="#e4e4e7">66.3</text>
+<text x="672" y="115" font-family="-apple-system,Helvetica,sans-serif" font-size="10" fill="#a1a1aa">avg · 36–92</text>
+<rect x="672" y="120" width="172" height="4" fill="#27272a" rx="2"/>
+<rect x="672" y="120" width="82" height="4" fill="url(#bar)" rx="2"/>
+<rect x="0" y="138" width="900" height="34" fill="#0f0f11"/>
+<rect x="0" y="171" width="900" height="1" fill="#3f3f46"/>
+<text x="24" y="159" font-family="-apple-system,Helvetica,sans-serif" font-size="10" letter-spacing="1" fill="#71717a">COMPANY ↕</text>
+<text x="174" y="159" font-family="-apple-system,Helvetica,sans-serif" font-size="10" letter-spacing="1" fill="#71717a">COUNTRY ↕</text>
+<text x="264" y="159" font-family="-apple-system,Helvetica,sans-serif" font-size="10" letter-spacing="1" fill="#71717a">PLAN ↕</text>
+<text x="354" y="159" font-family="-apple-system,Helvetica,sans-serif" font-size="10" letter-spacing="1" fill="#71717a">MRR ↕</text>
+<text x="444" y="159" font-family="-apple-system,Helvetica,sans-serif" font-size="10" letter-spacing="1" fill="#71717a">USERS ↕</text>
+<text x="514" y="159" font-family="-apple-system,Helvetica,sans-serif" font-size="10" letter-spacing="1" fill="#71717a">CHURN_RATE ↕</text>
+<text x="604" y="159" font-family="-apple-system,Helvetica,sans-serif" font-size="10" letter-spacing="1" fill="#71717a">NPS_SCORE ↕</text>
+<text x="684" y="159" font-family="-apple-system,Helvetica,sans-serif" font-size="10" letter-spacing="1" fill="#71717a">ACTIVE ↕</text>
+<rect x="0" y="172" width="900" height="34" fill="#27272a"/>
+<text x="24" y="194" font-size="12" fill="#e4e4e7">Acme Corp</text>
+<text x="174" y="194" font-size="12" fill="#e4e4e7">USA</text>
+<text x="264" y="194" font-size="12" fill="#e4e4e7">Enterprise</text>
+<text x="354" y="194" font-family="'SF Mono',Consolas,monospace" font-size="12" fill="#e4e4e7">$12,400</text>
+<rect x="407" y="190" width="20" height="4" fill="#6366f1" rx="2" opacity="0.6"/>
+<text x="444" y="194" font-family="'SF Mono',Consolas,monospace" font-size="12" fill="#e4e4e7">342</text>
+<text x="514" y="194" font-family="'SF Mono',Consolas,monospace" font-size="12" fill="#e4e4e7">2.1</text>
+<text x="604" y="194" font-family="'SF Mono',Consolas,monospace" font-size="12" fill="#e4e4e7">72</text>
+<text x="684" y="194" font-size="13" fill="#22c55e">✓</text>
+<rect x="0" y="206" width="900" height="34" fill="#0f0f11"/>
+<text x="24" y="228" font-size="12" fill="#e4e4e7">Borealis AI</text>
+<text x="174" y="228" font-size="12" fill="#e4e4e7">Canada</text>
+<text x="264" y="228" font-size="12" fill="#e4e4e7">Growth</text>
+<text x="354" y="228" font-family="'SF Mono',Consolas,monospace" font-size="12" fill="#e4e4e7">$4,800</text>
+<rect x="400" y="224" width="9" height="4" fill="#6366f1" rx="2" opacity="0.6"/>
+<text x="444" y="228" font-family="'SF Mono',Consolas,monospace" font-size="12" fill="#e4e4e7">89</text>
+<text x="514" y="228" font-family="'SF Mono',Consolas,monospace" font-size="12" fill="#e4e4e7">3.4</text>
+<text x="604" y="228" font-family="'SF Mono',Consolas,monospace" font-size="12" fill="#e4e4e7">65</text>
+<text x="684" y="228" font-size="13" fill="#22c55e">✓</text>
+<rect x="0" y="240" width="900" height="34" fill="#27272a"/>
+<text x="24" y="262" font-size="12" fill="#e4e4e7">Cirrus Cloud</text>
+<text x="174" y="262" font-size="12" fill="#e4e4e7">UK</text>
+<text x="264" y="262" font-size="12" fill="#e4e4e7">Starter</text>
+<text x="354" y="262" font-family="'SF Mono',Consolas,monospace" font-size="12" fill="#e4e4e7">$890</text>
+<rect x="386" y="258" width="2" height="4" fill="#6366f1" rx="2" opacity="0.6"/>
+<text x="444" y="262" font-family="'SF Mono',Consolas,monospace" font-size="12" fill="#e4e4e7">14</text>
+<text x="514" y="262" font-family="'SF Mono',Consolas,monospace" font-size="12" fill="#e4e4e7">8.2</text>
+<text x="604" y="262" font-family="'SF Mono',Consolas,monospace" font-size="12" fill="#e4e4e7">48</text>
+<text x="684" y="262" font-size="13" fill="#22c55e">✓</text>
+<rect x="0" y="274" width="900" height="34" fill="#0f0f11"/>
+<text x="24" y="296" font-size="12" fill="#e4e4e7">Drift Labs</text>
+<text x="174" y="296" font-size="12" fill="#e4e4e7">Germany</text>
+<text x="264" y="296" font-size="12" fill="#e4e4e7">Enterprise</text>
+<text x="354" y="296" font-family="'SF Mono',Consolas,monospace" font-size="12" fill="#e4e4e7">$18,750</text>
+<rect x="407" y="292" width="24" height="4" fill="#6366f1" rx="2" opacity="0.6"/>
+<text x="444" y="296" font-family="'SF Mono',Consolas,monospace" font-size="12" fill="#e4e4e7">521</text>
+<text x="514" y="296" font-family="'SF Mono',Consolas,monospace" font-size="12" fill="#e4e4e7">1.2</text>
+<text x="604" y="296" font-family="'SF Mono',Consolas,monospace" font-size="12" fill="#e4e4e7">81</text>
+<text x="684" y="296" font-size="13" fill="#22c55e">✓</text>
+<rect x="0" y="308" width="900" height="34" fill="#27272a"/>
+<text x="24" y="330" font-size="12" fill="#e4e4e7">Ember.io</text>
+<text x="174" y="330" font-size="12" fill="#e4e4e7">Australia</text>
+<text x="264" y="330" font-size="12" fill="#e4e4e7">Growth</text>
+<text x="354" y="330" font-family="'SF Mono',Consolas,monospace" font-size="12" fill="#e4e4e7">$6,200</text>
+<rect x="400" y="326" width="12" height="4" fill="#6366f1" rx="2" opacity="0.6"/>
+<text x="444" y="330" font-family="'SF Mono',Consolas,monospace" font-size="12" fill="#e4e4e7">167</text>
+<text x="514" y="330" font-family="'SF Mono',Consolas,monospace" font-size="12" fill="#e4e4e7">2.9</text>
+<text x="604" y="330" font-family="'SF Mono',Consolas,monospace" font-size="12" fill="#e4e4e7">68</text>
+<text x="684" y="330" font-size="13" fill="#22c55e">✓</text>
+<rect x="0" y="342" width="900" height="34" fill="#0f0f11"/>
+<text x="24" y="364" font-size="12" fill="#e4e4e7">Folio Tech</text>
+<text x="174" y="364" font-size="12" fill="#e4e4e7">Japan</text>
+<text x="264" y="364" font-size="12" fill="#e4e4e7">Starter</text>
+<text x="354" y="364" font-family="'SF Mono',Consolas,monospace" font-size="12" fill="#e4e4e7">$350</text>
+<rect x="386" y="360" width="0" height="4" fill="#6366f1" rx="2" opacity="0.6"/>
+<text x="444" y="364" font-family="'SF Mono',Consolas,monospace" font-size="12" fill="#e4e4e7">8</text>
+<text x="514" y="364" font-family="'SF Mono',Consolas,monospace" font-size="12" fill="#e4e4e7">12.1</text>
+<text x="604" y="364" font-family="'SF Mono',Consolas,monospace" font-size="12" fill="#e4e4e7">41</text>
+<text x="684" y="364" font-size="13" fill="#22c55e">✓</text>
+<rect x="0" y="376" width="900" height="34" fill="#27272a"/>
+<text x="24" y="398" font-size="12" fill="#e4e4e7">Galactic SaaS</text>
+<text x="174" y="398" font-size="12" fill="#e4e4e7">USA</text>
+<text x="264" y="398" font-size="12" fill="#e4e4e7">Enterprise</text>
+<text x="354" y="398" font-family="'SF Mono',Consolas,monospace" font-size="12" fill="#e4e4e7">$31,000</text>
+<rect x="407" y="394" width="32" height="4" fill="#6366f1" rx="2" opacity="0.6"/>
+<text x="444" y="398" font-family="'SF Mono',Consolas,monospace" font-size="12" fill="#e4e4e7">890</text>
+<text x="514" y="398" font-family="'SF Mono',Consolas,monospace" font-size="12" fill="#e4e4e7">0.8</text>
+<text x="604" y="398" font-family="'SF Mono',Consolas,monospace" font-size="12" fill="#e4e4e7">88</text>
+<text x="684" y="398" font-size="13" fill="#22c55e">✓</text>
+<rect x="0" y="410" width="900" height="34" fill="#0f0f11"/>
+<text x="24" y="432" font-size="12" fill="#e4e4e7">Helix Systems</text>
+<text x="174" y="432" font-size="12" fill="#e4e4e7">France</text>
+<text x="264" y="432" font-size="12" fill="#e4e4e7">Growth</text>
+<text x="354" y="432" font-family="'SF Mono',Consolas,monospace" font-size="12" fill="#e4e4e7">$5,100</text>
+<rect x="400" y="428" width="10" height="4" fill="#6366f1" rx="2" opacity="0.6"/>
+<text x="444" y="432" font-family="'SF Mono',Consolas,monospace" font-size="12" fill="#e4e4e7">112</text>
+<text x="514" y="432" font-family="'SF Mono',Consolas,monospace" font-size="12" fill="#e4e4e7">3.1</text>
+<text x="604" y="432" font-family="'SF Mono',Consolas,monospace" font-size="12" fill="#e4e4e7">70</text>
+<text x="684" y="432" font-size="13" fill="#22c55e">✓</text>
+<rect x="0" y="442" width="900" height="38" fill="#18181b"/>
+<rect x="0" y="442" width="900" height="1" fill="#3f3f46"/>
+<text x="24" y="465" font-family="-apple-system,Helvetica,sans-serif" font-size="12" fill="#a1a1aa">Showing 1–30 of 30 rows</text>
+</g>
+</svg>

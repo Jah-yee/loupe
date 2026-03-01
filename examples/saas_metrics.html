@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>saas_metrics.csv — loupe</title>
+  <style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0f0f11;--bg2:#18181b;--bg3:#27272a;
+  --border:#3f3f46;--text:#e4e4e7;--sub:#a1a1aa;--muted:#71717a;
+  --accent:#6366f1;--accent2:#a855f7;
+  --green:#22c55e;--red:#ef4444;--amber:#f59e0b;
+  --radius:10px;--font:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,sans-serif;
+  --mono:'SF Mono','Cascadia Code','JetBrains Mono',Consolas,monospace;
+}
+[data-theme=light]{
+  --bg:#fafaf9;--bg2:#ffffff;--bg3:#f5f5f4;
+  --border:#e7e5e4;--text:#1c1917;--sub:#78716c;--muted:#a8a29e;
+}
+body{background:var(--bg);color:var(--text);font-family:var(--font);font-size:14px;min-height:100vh}
+header{
+  display:flex;align-items:center;gap:16px;padding:18px 24px;
+  background:var(--bg2);border-bottom:1px solid var(--border);
+  position:sticky;top:0;z-index:10;flex-wrap:wrap;
+}
+.logo{font-size:20px;font-weight:700;background:linear-gradient(135deg,var(--accent),var(--accent2));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;white-space:nowrap}
+.meta{color:var(--sub);font-size:13px;white-space:nowrap}
+.search{
+  flex:1;min-width:160px;max-width:320px;padding:7px 12px;
+  background:var(--bg3);border:1px solid var(--border);border-radius:8px;
+  color:var(--text);font-size:13px;outline:none;margin-left:auto;
+}
+.search:focus{border-color:var(--accent)}
+.btn{
+  padding:6px 12px;border-radius:8px;border:1px solid var(--border);
+  background:var(--bg3);color:var(--sub);cursor:pointer;font-size:12px;
+  white-space:nowrap;
+}
+.btn:hover{border-color:var(--accent);color:var(--text)}
+.stats-row{
+  display:flex;gap:12px;padding:16px 24px;flex-wrap:wrap;
+  border-bottom:1px solid var(--border);background:var(--bg);
+}
+.stat-card{
+  background:var(--bg2);border:1px solid var(--border);border-radius:var(--radius);
+  padding:12px 16px;min-width:130px;flex:1;max-width:200px;
+}
+.stat-label{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.stat-val{font-size:18px;font-weight:600;color:var(--text)}
+.stat-sub{font-size:11px;color:var(--sub);margin-top:2px}
+.bar{height:4px;background:var(--bg3);border-radius:2px;margin-top:8px;overflow:hidden}
+.bar-fill{height:100%;border-radius:2px;background:linear-gradient(90deg,var(--accent),var(--accent2))}
+.table-wrap{overflow-x:auto;padding:0 24px 24px}
+table{width:100%;border-collapse:collapse;font-size:13px;margin-top:16px}
+th{
+  text-align:left;padding:10px 12px;font-size:11px;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--muted);border-bottom:1px solid var(--border);cursor:pointer;
+  white-space:nowrap;user-select:none;background:var(--bg);position:sticky;top:62px;
+}
+th:hover{color:var(--accent)}
+th .sort-icon{margin-left:4px;opacity:.4;font-size:10px}
+th.sorted .sort-icon{opacity:1;color:var(--accent)}
+td{
+  padding:9px 12px;border-bottom:1px solid var(--border);
+  color:var(--text);max-width:300px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+}
+tr:hover td{background:var(--bg3)}
+td.num{font-family:var(--mono);font-size:12px;color:var(--text)}
+td.bool-true{color:var(--green)}
+td.bool-false{color:var(--red)}
+.mini-bar{
+  display:inline-block;height:4px;background:var(--accent);
+  border-radius:2px;vertical-align:middle;margin-left:6px;opacity:.6;
+}
+footer{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:12px 24px;border-top:1px solid var(--border);
+  color:var(--sub);font-size:12px;background:var(--bg2);flex-wrap:wrap;gap:8px;
+}
+.page-btns{display:flex;gap:6px;align-items:center}
+.page-btn{
+  padding:4px 10px;border-radius:6px;border:1px solid var(--border);
+  background:var(--bg3);color:var(--sub);cursor:pointer;font-size:12px;
+}
+.page-btn:hover{border-color:var(--accent);color:var(--text)}
+.page-btn.active{background:var(--accent);border-color:var(--accent);color:#fff}
+.empty{text-align:center;padding:48px;color:var(--muted)}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">⊙ loupe</div>
+  <div class="meta">saas_metrics.csv · 9 cols · 30 rows</div>
+  <input class="search" id="search" type="search" placeholder="Search all columns…" autocomplete="off">
+  <button class="btn" id="theme-btn" onclick="toggleTheme()">◑</button>
+</header>
+<div class="stats-row"><div class="stat-card"><div class="stat-label">mrr</div><div class="stat-val">11420.0</div><div class="stat-sub">avg · 350–41200</div><div class="bar"><div class="bar-fill" style="width:27%"></div></div></div> <div class="stat-card"><div class="stat-label">users</div><div class="stat-val">302.4</div><div class="stat-sub">avg · 7–1102</div><div class="bar"><div class="bar-fill" style="width:26%"></div></div></div> <div class="stat-card"><div class="stat-label">churn_rate</div><div class="stat-val">4.3</div><div class="stat-sub">avg · 1–14</div><div class="bar"><div class="bar-fill" style="width:28%"></div></div></div> <div class="stat-card"><div class="stat-label">nps_score</div><div class="stat-val">67.2</div><div class="stat-sub">avg · 36–92</div><div class="bar"><div class="bar-fill" style="width:55%"></div></div></div></div>
+<div class="table-wrap">
+  <table>
+    <thead><tr><th data-col="company">company<span class="sort-icon">↕</span></th><th data-col="country">country<span class="sort-icon">↕</span></th><th data-col="plan">plan<span class="sort-icon">↕</span></th><th data-col="mrr">mrr<span class="sort-icon">↕</span></th><th data-col="users">users<span class="sort-icon">↕</span></th><th data-col="churn_rate">churn_rate<span class="sort-icon">↕</span></th><th data-col="nps_score">nps_score<span class="sort-icon">↕</span></th><th data-col="founded">founded<span class="sort-icon">↕</span></th><th data-col="active">active<span class="sort-icon">↕</span></th></tr></thead>
+    <tbody></tbody>
+  </table>
+</div>
+<footer>
+  <span id="footer-info"></span>
+  <div class="page-btns" id="pager"></div>
+</footer>
+<script>
+const DATA = [{"company": "Acme Corp", "country": "USA", "plan": "Enterprise", "mrr": "12400", "users": "342", "churn_rate": "2.1", "nps_score": "72", "founded": "2019-03-15", "active": "yes"}, {"company": "Borealis AI", "country": "Canada", "plan": "Growth", "mrr": "4800", "users": "89", "churn_rate": "3.4", "nps_score": "65", "founded": "2020-07-22", "active": "yes"}, {"company": "Cirrus Cloud", "country": "UK", "plan": "Starter", "mrr": "890", "users": "14", "churn_rate": "8.2", "nps_score": "48", "founded": "2021-11-01", "active": "yes"}, {"company": "Drift Labs", "country": "Germany", "plan": "Enterprise", "mrr": "18750", "users": "521", "churn_rate": "1.2", "nps_score": "81", "founded": "2018-05-10", "active": "yes"}, {"company": "Ember.io", "country": "Australia", "plan": "Growth", "mrr": "6200", "users": "167", "churn_rate": "2.9", "nps_score": "68", "founded": "2020-01-30", "active": "yes"}, {"company": "Folio Tech", "country": "Japan", "plan": "Starter", "mrr": "350", "users": "8", "churn_rate": "12.1", "nps_score": "41", "founded": "2022-04-18", "active": "yes"}, {"company": "Galactic SaaS", "country": "USA", "plan": "Enterprise", "mrr": "31000", "users": "890", "churn_rate": "0.8", "nps_score": "88", "founded": "2016-09-03", "active": "yes"}, {"company": "Helix Systems", "country": "France", "plan": "Growth", "mrr": "5100", "users": "112", "churn_rate": "3.1", "nps_score": "70", "founded": "2019-12-14", "active": "yes"}, {"company": "Ironclad Data", "country": "Canada", "plan": "Enterprise", "mrr": "22600", "users": "644", "churn_rate": "1.5", "nps_score": "79", "founded": "2017-06-28", "active": "yes"}, {"company": "Juno Analytics", "country": "Brazil", "plan": "Starter", "mrr": "1200", "users": "27", "churn_rate": "6.8", "nps_score": "55", "founded": "2021-08-07", "active": "yes"}, {"company": "Kova Platform", "country": "India", "plan": "Growth", "mrr": "3700", "users": "81", "churn_rate": "4.2", "nps_score": "61", "founded": "2020-10-19", "active": "yes"}, {"company": "Lattice Works", "country": "Netherlands", "plan": "Enterprise", "mrr": "14900", "users": "398", "churn_rate": "1.9", "nps_score": "74", "founded": "2018-02-25", "active": "yes"}, {"company": "Metaform", "country": "USA", "plan": "Growth", "mrr": "7800", "users": "201", "churn_rate": "2.6", "nps_score": "77", "founded": "2019-07-11", "active": "yes"}, {"company": "Nexus AI", "country": "UK", "plan": "Enterprise", "mrr": "28400", "users": "712", "churn_rate": "1.1", "nps_score": "85", "founded": "2017-03-17", "active": "yes"}, {"company": "Orbit Cloud", "country": "Singapore", "plan": "Starter", "mrr": "680", "users": "11", "churn_rate": "9.7", "nps_score": "44", "founded": "2022-01-05", "active": "yes"}, {"company": "Praxis Labs", "country": "USA", "plan": "Enterprise", "mrr": "19200", "users": "503", "churn_rate": "1.6", "nps_score": "80", "founded": "2018-11-22", "active": "yes"}, {"company": "Quantico", "country": "Sweden", "plan": "Growth", "mrr": "4400", "users": "96", "churn_rate": "3.8", "nps_score": "63", "founded": "2020-05-30", "active": "yes"}, {"company": "Radiant IO", "country": "Mexico", "plan": "Starter", "mrr": "520", "users": "9", "churn_rate": "11.3", "nps_score": "39", "founded": "2022-06-14", "active": "yes"}, {"company": "Spectral", "country": "USA", "plan": "Enterprise", "mrr": "41200", "users": "1102", "churn_rate": "0.6", "nps_score": "92", "founded": "2015-04-07", "active": "yes"}, {"company": "Tundra Systems", "country": "Norway", "plan": "Growth", "mrr": "5600", "users": "130", "churn_rate": "2.7", "nps_score": "71", "founded": "2019-09-18", "active": "yes"}, {"company": "Umbra Analytics", "country": "Germany", "plan": "Starter", "mrr": "940", "users": "18", "churn_rate": "7.4", "nps_score": "52", "founded": "2021-03-29", "active": "yes"}, {"company": "Vortex Cloud", "country": "USA", "plan": "Enterprise", "mrr": "33700", "users": "941", "churn_rate": "0.9", "nps_score": "87", "founded": "2016-07-15", "active": "yes"}, {"company": "Waveline", "country": "South Korea", "plan": "Growth", "mrr": "6800", "users": "178", "churn_rate": "2.4", "nps_score": "75", "founded": "2019-11-04", "active": "yes"}, {"company": "Xenith Tech", "country": "Israel", "plan": "Enterprise", "mrr": "16300", "users": "437", "churn_rate": "1.7", "nps_score": "76", "founded": "2018-08-20", "active": "yes"}, {"company": "Yellowbird", "country": "Australia", "plan": "Starter", "mrr": "410", "users": "7", "churn_rate": "13.5", "nps_score": "36", "founded": "2022-09-12", "active": "no"}, {"company": "Zenotype", "country": "Canada", "plan": "Growth", "mrr": "3200", "users": "71", "churn_rate": "5.1", "nps_score": "58", "founded": "2021-02-17", "active": "yes"}, {"company": "Arista Net", "country": "USA", "plan": "Enterprise", "mrr": "25800", "users": "688", "churn_rate": "1.3", "nps_score": "83", "founded": "2017-10-09", "active": "yes"}, {"company": "Bloom Data", "country": "UK", "plan": "Starter", "mrr": "760", "users": "13", "churn_rate": "9.2", "nps_score": "47", "founded": "2022-07-23", "active": "yes"}, {"company": "Cascade AI", "country": "France", "plan": "Growth", "mrr": "4900", "users": "107", "churn_rate": "3.5", "nps_score": "66", "founded": "2020-04-16", "active": "yes"}, {"company": "Datavoid", "country": "Netherlands", "plan": "Enterprise", "mrr": "20100", "users": "554", "churn_rate": "1.4", "nps_score": "82", "founded": "2017-12-31", "active": "yes"}];
+const COLS = ["company", "country", "plan", "mrr", "users", "churn_rate", "nps_score", "founded", "active"];
+const TYPES = {"company": "text", "country": "text", "plan": "text", "mrr": "number", "users": "number", "churn_rate": "number", "nps_score": "number", "founded": "date", "active": "boolean"};
+
+const PAGE_SIZE = 50;
+let filtered = DATA;
+let sortCol = null, sortDir = 1, page = 0;
+let query = "";
+
+const tbody = document.querySelector("tbody");
+const footer_info = document.getElementById("footer-info");
+const search = document.getElementById("search");
+
+function parseNum(v) {
+  return parseFloat(String(v).replace(/[,$%€£]/g, "")) || 0;
+}
+
+function sort(col) {
+  if (sortCol === col) sortDir *= -1;
+  else { sortCol = col; sortDir = 1; }
+  page = 0;
+  render();
+  document.querySelectorAll("th").forEach(th => {
+    th.classList.toggle("sorted", th.dataset.col === col);
+    if (th.dataset.col === col)
+      th.querySelector(".sort-icon").textContent = sortDir > 0 ? "↑" : "↓";
+    else
+      th.querySelector(".sort-icon").textContent = "↕";
+  });
+}
+
+function filter(q) {
+  query = q.toLowerCase();
+  page = 0;
+  filtered = query
+    ? DATA.filter(row => COLS.some(c => String(row[c] ?? "").toLowerCase().includes(query)))
+    : DATA;
+  render();
+}
+
+function render() {
+  let rows = filtered.slice();
+  if (sortCol) {
+    rows.sort((a, b) => {
+      const av = a[sortCol] ?? "", bv = b[sortCol] ?? "";
+      if (TYPES[sortCol] === "number")
+        return (parseNum(av) - parseNum(bv)) * sortDir;
+      return String(av).localeCompare(String(bv)) * sortDir;
+    });
+  }
+
+  // Column mins/maxes for mini bars
+  const numMeta = {};
+  for (const c of COLS) {
+    if (TYPES[c] === "number") {
+      const vals = rows.map(r => parseNum(r[c]));
+      numMeta[c] = { min: Math.min(...vals), max: Math.max(...vals) };
+    }
+  }
+
+  const slice = rows.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
+  const total = rows.length;
+  const start = page * PAGE_SIZE + 1;
+  const end = Math.min((page + 1) * PAGE_SIZE, total);
+
+  tbody.innerHTML = slice.length ? slice.map(row => `
+    <tr>${COLS.map(c => {
+      const v = row[c] ?? "";
+      const t = TYPES[c];
+      if (t === "number") {
+        const n = parseNum(v);
+        const {min, max} = numMeta[c];
+        const pct = max !== min ? Math.round((n - min) / (max - min) * 60) : 60;
+        return `<td class="num">${v}<span class="mini-bar" style="width:${pct}px"></span></td>`;
+      }
+      if (t === "boolean") {
+        const b = ["true","yes","1","t","y"].includes(String(v).toLowerCase());
+        return `<td class="bool-${b}">${b ? "✓" : "✗"}</td>`;
+      }
+      return `<td title="${String(v).replace(/"/g,'&quot;')}">${v}</td>`;
+    }).join("")}
+    </tr>`).join("") : `<tr><td class="empty" colspan="${COLS.length}">No results found</td></tr>`;
+
+  footer_info.textContent = total === DATA.length
+    ? `Showing ${start}–${end} of ${total.toLocaleString()} rows`
+    : `${total.toLocaleString()} matches · showing ${start}–${end}`;
+
+  renderPager(total);
+}
+
+function renderPager(total) {
+  const pages = Math.ceil(total / PAGE_SIZE);
+  const pager = document.getElementById("pager");
+  if (pages <= 1) { pager.innerHTML = ""; return; }
+  const range = [];
+  for (let i = 0; i < pages; i++) {
+    if (i === 0 || i === pages-1 || Math.abs(i - page) <= 2) range.push(i);
+    else if (range[range.length-1] !== "…") range.push("…");
+  }
+  pager.innerHTML = [
+    `<button class="page-btn" onclick="go(${page-1})" ${page===0?"disabled":""}>←</button>`,
+    ...range.map(i => i === "…"
+      ? `<span style="color:var(--muted)">…</span>`
+      : `<button class="page-btn ${i===page?"active":""}" onclick="go(${i})">${i+1}</button>`),
+    `<button class="page-btn" onclick="go(${page+1})" ${page>=pages-1?"disabled":""}>→</button>`,
+  ].join("");
+}
+
+function go(p) {
+  const pages = Math.ceil(filtered.length / PAGE_SIZE);
+  if (p < 0 || p >= pages) return;
+  page = p;
+  render();
+  window.scrollTo(0, 0);
+}
+
+function toggleTheme() {
+  const t = document.documentElement.dataset.theme === "light" ? "dark" : "light";
+  document.documentElement.dataset.theme = t === "dark" ? "" : "light";
+  document.getElementById("theme-btn").textContent = t === "light" ? "☀" : "◑";
+}
+
+search.addEventListener("input", e => filter(e.target.value));
+document.querySelectorAll("th[data-col]").forEach(th =>
+  th.addEventListener("click", () => sort(th.dataset.col)));
+
+render();
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+[
+  {"name": "react", "weekly_downloads": 23400000, "version": "18.3.1", "license": "MIT", "size_kb": 89, "typescript": "yes", "deprecated": "no"},
+  {"name": "lodash", "weekly_downloads": 49100000, "version": "4.17.21", "license": "MIT", "size_kb": 531, "typescript": "yes", "deprecated": "no"},
+  {"name": "express", "weekly_downloads": 33800000, "version": "4.19.2", "license": "MIT", "size_kb": 208, "typescript": "yes", "deprecated": "no"},
+  {"name": "axios", "weekly_downloads": 51200000, "version": "1.7.2", "license": "MIT", "size_kb": 145, "typescript": "yes", "deprecated": "no"},
+  {"name": "moment", "weekly_downloads": 18900000, "version": "2.30.1", "license": "MIT", "size_kb": 4340, "typescript": "yes", "deprecated": "yes"},
+  {"name": "chalk", "weekly_downloads": 211000000, "version": "5.3.0", "license": "MIT", "size_kb": 18, "typescript": "yes", "deprecated": "no"},
+  {"name": "uuid", "weekly_downloads": 89400000, "version": "9.0.1", "license": "MIT", "size_kb": 42, "typescript": "yes", "deprecated": "no"},
+  {"name": "dotenv", "weekly_downloads": 45600000, "version": "16.4.5", "license": "BSD-2", "size_kb": 27, "typescript": "yes", "deprecated": "no"},
+  {"name": "typescript", "weekly_downloads": 68700000, "version": "5.5.2", "license": "Apache-2.0", "size_kb": 70800, "typescript": "yes", "deprecated": "no"},
+  {"name": "jest", "weekly_downloads": 21300000, "version": "29.7.0", "license": "MIT", "size_kb": 1120, "typescript": "yes", "deprecated": "no"},
+  {"name": "webpack", "weekly_downloads": 25100000, "version": "5.92.1", "license": "MIT", "size_kb": 5840, "typescript": "yes", "deprecated": "no"},
+  {"name": "eslint", "weekly_downloads": 39800000, "version": "9.5.0", "license": "MIT", "size_kb": 2910, "typescript": "yes", "deprecated": "no"},
+  {"name": "prettier", "weekly_downloads": 36500000, "version": "3.3.2", "license": "MIT", "size_kb": 9840, "typescript": "yes", "deprecated": "no"},
+  {"name": "next", "weekly_downloads": 7800000, "version": "14.2.4", "license": "MIT", "size_kb": 22400, "typescript": "yes", "deprecated": "no"},
+  {"name": "vue", "weekly_downloads": 4100000, "version": "3.4.31", "license": "MIT", "size_kb": 396, "typescript": "yes", "deprecated": "no"},
+  {"name": "zod", "weekly_downloads": 23600000, "version": "3.23.8", "license": "MIT", "size_kb": 284, "typescript": "yes", "deprecated": "no"},
+  {"name": "tailwindcss", "weekly_downloads": 12900000, "version": "3.4.4", "license": "MIT", "size_kb": 5230, "typescript": "no", "deprecated": "no"},
+  {"name": "vite", "weekly_downloads": 18400000, "version": "5.3.1", "license": "MIT", "size_kb": 4610, "typescript": "yes", "deprecated": "no"},
+  {"name": "commander", "weekly_downloads": 104000000, "version": "12.1.0", "license": "MIT", "size_kb": 98, "typescript": "yes", "deprecated": "no"},
+  {"name": "yargs", "weekly_downloads": 81200000, "version": "17.7.2", "license": "MIT", "size_kb": 204, "typescript": "yes", "deprecated": "no"}
+]
