@@ -1,4 +1,7 @@
 <img width="3640" height="1834" alt="loupea" src="https://github.com/user-attachments/assets/a8291987-93f7-4058-a0c0-55d53071639c" />
+
+<br>
+
 # loupe
 
 Turn any CSV or JSON into a beautiful, interactive HTML dashboard. One command. Zero dependencies.
