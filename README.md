@@ -18,6 +18,7 @@ You have a CSV. You want to explore it — sort, filter, search, see some stats.
 - **Pandas + Jupyter** — `pip install`, open notebook, write `df.head()`, realize you need more code
 - **Observable / Datasette** — serious tools for serious setups. You just want to look at data.
 
+<img width="3640" height="1834" alt="loupea" src="https://github.com/user-attachments/assets/a8291987-93f7-4058-a0c0-55d53071639c" />
 **loupe** takes any CSV or JSON and spits out a single `.html` file. Open it in any browser, offline, forever. Sort columns, search across everything, get stats on numeric columns automatically.
 
 The output file has no external dependencies — no CDN calls, no server, no JS framework. It's just a well-crafted HTML file.
