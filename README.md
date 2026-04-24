@@ -4,7 +4,7 @@
 
 # loupe
 
-Turn any CSV or JSON into a beautiful, interactive HTML dashboard. One command. Zero dependencies.
+Turn any CSV, JSON or XLSX into a beautiful, interactive HTML dashboard. One command. Zero dependencies.
 
 <br>
 
@@ -138,7 +138,7 @@ The template — CSS variables for theming, sticky headers, monospace numbers, i
 
 ## Supported input
 
-Everything that outputs CSV or JSON — databases, APIs, spreadsheets, BI tools, logs, `jq`, `psql -c "\copy ..."`, `gh api`, you name it.
+Everything that outputs CSV, JSON or XLSX — databases, APIs, spreadsheets, BI tools, logs, `jq`, `psql -c "\copy ..."`, `gh api`, you name it.
 
 ```bash
 # GitHub repo stats via gh CLI
