@@ -11,6 +11,8 @@ Usage:
 import argparse
 import csv
 import json
+from openpyxl import load_workbook
+from io import StringIO
 import os
 import sys
 from datetime import datetime
@@ -21,6 +23,25 @@ __version__ = "0.1.0"
 # ═══════════════════════════════════════════════════════════════
 # DATA LOADING
 # ═══════════════════════════════════════════════════════════════
+
+def load_xlsx(path):
+    wb = load_workbook(path, read_only=True, keep_vba=False, data_only=True)
+    ws = wb.active
+    rows = list(ws.iter_rows(values_only=True))
+    
+    if not rows:
+        return [], []
+    
+    columns = [str(c) for c in rows[0]]
+    data_rows = []
+    
+    for row in rows[1:]:
+        data_rows.append({
+            columns[i]: str(row[i]) if row[i] is not None else ""
+            for i in range(len(columns))
+        })
+    
+    return columns, data_rows
 
 def load_csv(text):
     reader = csv.DictReader(text.splitlines())
@@ -433,10 +454,20 @@ def main():
         filename = args.input
 
     # Parse
-    fmt = args.format or ("json" if args.input.endswith(".json") else "csv")
+    if args.format:
+        fmt = args.format
+    elif args.input.endswith(".json"):
+        fmt = "json"
+    elif args.input.endswith(".xlsx"):
+        fmt = "xlsx"
+    else:
+        fmt = "csv"
+
     try:
         if fmt == "json":
             columns, rows = load_json(text)
+        elif fmt == "xlsx":
+            columns, rows = load_xlsx(args.input)
         else:
             columns, rows = load_csv(text)
     except Exception as e:
