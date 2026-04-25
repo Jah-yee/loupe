@@ -2,8 +2,6 @@
 
 <img src="https://github.com/user-attachments/assets/a8291987-93f7-4058-a0c0-55d53071639c" alt="loupe" width="420">
 
-<h1>loupe</h1>
-
 <p>
 Turn any CSV or JSON into a beautiful, interactive HTML dashboard.<br>
 One command. Zero dependencies.
