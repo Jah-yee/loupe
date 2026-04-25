@@ -1,18 +1,19 @@
-<img width="3640" height="1834" alt="loupea" src="https://github.com/user-attachments/assets/a8291987-93f7-4058-a0c0-55d53071639c" />
-
-<br>
-
-# loupe
-
-Turn any CSV or JSON into a beautiful, interactive HTML dashboard. One command. Zero dependencies.
-
-<br>
-
 <div align="center">
-<img src="examples/preview.svg" alt="loupe dashboard preview" width="100%">
-</div>
+
+<img src="https://github.com/user-attachments/assets/a8291987-93f7-4058-a0c0-55d53071639c" alt="loupe" width="420">
+
+<h1>loupe</h1>
+
+<p>
+Turn any CSV or JSON into a beautiful, interactive HTML dashboard.<br>
+One command. Zero dependencies.
+</p>
 
 <br>
+
+<img src="examples/preview.svg" alt="loupe dashboard preview" width="100%">
+
+</div>
 
 ## Why
 
